@@ -23,6 +23,12 @@
 		5BA0EA7D17A935D900E1CC41 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BA0EA5817A935D800E1CC41 /* Foundation.framework */; };
 		5BA0EA8517A935D900E1CC41 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5BA0EA8317A935D900E1CC41 /* InfoPlist.strings */; };
 		5BA0EA8817A935D900E1CC41 /* testMovingViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA0EA8717A935D900E1CC41 /* testMovingViewTests.m */; };
+		5BA0EA9217A9388000E1CC41 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BA0EA9117A9388000E1CC41 /* QuartzCore.framework */; };
+		5BA0EA9617A9439600E1CC41 /* NewsSectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA0EA9417A9439600E1CC41 /* NewsSectionViewController.m */; };
+		5BA0EA9717A9439600E1CC41 /* NewsSectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BA0EA9517A9439600E1CC41 /* NewsSectionViewController.xib */; };
+		5BA0EA9B17A944F700E1CC41 /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA0EA9A17A944F700E1CC41 /* News.m */; };
+		5BA0EA9E17A949B500E1CC41 /* news.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5BA0EA9D17A949B500E1CC41 /* news.jpg */; };
+		5BA0EAA217A968AC00E1CC41 /* NewsSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA0EAA117A968AC00E1CC41 /* NewsSection.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +64,15 @@
 		5BA0EA8417A935D900E1CC41 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5BA0EA8617A935D900E1CC41 /* testMovingViewTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testMovingViewTests.h; sourceTree = "<group>"; };
 		5BA0EA8717A935D900E1CC41 /* testMovingViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testMovingViewTests.m; sourceTree = "<group>"; };
+		5BA0EA9117A9388000E1CC41 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		5BA0EA9317A9439600E1CC41 /* NewsSectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewsSectionViewController.h; path = ViewControllers/NewsSectionViewController.h; sourceTree = "<group>"; };
+		5BA0EA9417A9439600E1CC41 /* NewsSectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewsSectionViewController.m; path = ViewControllers/NewsSectionViewController.m; sourceTree = "<group>"; };
+		5BA0EA9517A9439600E1CC41 /* NewsSectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NewsSectionViewController.xib; path = ViewControllers/NewsSectionViewController.xib; sourceTree = "<group>"; };
+		5BA0EA9917A944F700E1CC41 /* News.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = News.h; sourceTree = "<group>"; };
+		5BA0EA9A17A944F700E1CC41 /* News.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = News.m; sourceTree = "<group>"; };
+		5BA0EA9D17A949B500E1CC41 /* news.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = news.jpg; path = ../../../news.jpg; sourceTree = "<group>"; };
+		5BA0EAA017A968AC00E1CC41 /* NewsSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsSection.h; sourceTree = "<group>"; };
+		5BA0EAA117A968AC00E1CC41 /* NewsSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsSection.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BA0EA9217A9388000E1CC41 /* QuartzCore.framework in Frameworks */,
 				5BA0EA5717A935D800E1CC41 /* UIKit.framework in Frameworks */,
 				5BA0EA5917A935D800E1CC41 /* Foundation.framework in Frameworks */,
 				5BA0EA5B17A935D800E1CC41 /* CoreGraphics.framework in Frameworks */,
@@ -106,6 +122,7 @@
 		5BA0EA5517A935D800E1CC41 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5BA0EA9117A9388000E1CC41 /* QuartzCore.framework */,
 				5BA0EA5617A935D800E1CC41 /* UIKit.framework */,
 				5BA0EA5817A935D800E1CC41 /* Foundation.framework */,
 				5BA0EA5A17A935D800E1CC41 /* CoreGraphics.framework */,
@@ -117,6 +134,9 @@
 		5BA0EA5C17A935D800E1CC41 /* testMovingView */ = {
 			isa = PBXGroup;
 			children = (
+				5BA0EA9F17A9687A00E1CC41 /* Data */,
+				5BA0EA9C17A9499F00E1CC41 /* Resources */,
+				5BA0EA9817A943A500E1CC41 /* ViewControllers */,
 				5BA0EA6517A935D800E1CC41 /* AppDelegate.h */,
 				5BA0EA6617A935D800E1CC41 /* AppDelegate.m */,
 				5BA0EA6E17A935D900E1CC41 /* ViewController.h */,
@@ -158,6 +178,35 @@
 				5BA0EA8317A935D900E1CC41 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5BA0EA9817A943A500E1CC41 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5BA0EA9317A9439600E1CC41 /* NewsSectionViewController.h */,
+				5BA0EA9417A9439600E1CC41 /* NewsSectionViewController.m */,
+				5BA0EA9517A9439600E1CC41 /* NewsSectionViewController.xib */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5BA0EA9C17A9499F00E1CC41 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5BA0EA9D17A949B500E1CC41 /* news.jpg */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		5BA0EA9F17A9687A00E1CC41 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				5BA0EAA017A968AC00E1CC41 /* NewsSection.h */,
+				5BA0EAA117A968AC00E1CC41 /* NewsSection.m */,
+				5BA0EA9917A944F700E1CC41 /* News.h */,
+				5BA0EA9A17A944F700E1CC41 /* News.m */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +285,8 @@
 				5BA0EA6B17A935D800E1CC41 /* Default@2x.png in Resources */,
 				5BA0EA6D17A935D900E1CC41 /* Default-568h@2x.png in Resources */,
 				5BA0EA7317A935D900E1CC41 /* ViewController.xib in Resources */,
+				5BA0EA9717A9439600E1CC41 /* NewsSectionViewController.xib in Resources */,
+				5BA0EA9E17A949B500E1CC41 /* news.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +324,9 @@
 				5BA0EA6317A935D800E1CC41 /* main.m in Sources */,
 				5BA0EA6717A935D800E1CC41 /* AppDelegate.m in Sources */,
 				5BA0EA7017A935D900E1CC41 /* ViewController.m in Sources */,
+				5BA0EA9617A9439600E1CC41 /* NewsSectionViewController.m in Sources */,
+				5BA0EA9B17A944F700E1CC41 /* News.m in Sources */,
+				5BA0EAA217A968AC00E1CC41 /* NewsSection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
