@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "NewsSectionViewController.h"
 
-@interface ViewController : UIViewController<movingImageDelegate>
+@interface ViewController : UIViewController
 
 @end

@@ -9,27 +9,100 @@
 #import "ViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "News.h"
-#import "NewsSectionViewController.h"
 #import "NewsSection.h"
+#import "NewsSectionListViewController.h"
+#import "NewsPanelViewController.h"
+#import "NewsViewController.h"
+
+typedef enum {
+    NewsViewCtrlTypePanel = 0,
+    NewsViewCtrlTypeList
+} NewsViewCtrlType;
 
 @interface ViewController ()
-@property (weak, nonatomic) IBOutlet UIView *containerView1;
-@property (weak, nonatomic) IBOutlet UIView *containerView2;
-@property (weak, nonatomic) IBOutlet UIView *childView;
-- (IBAction)moveToView1:(id)sender;
-- (IBAction)moveToView2:(id)sender;
+@property NewsViewCtrlType type;
+@property (nonatomic,strong) NewsSectionListViewController *newsSectionListViewCtrl;
+@property (nonatomic,strong) NewsPanelViewController *newsPanelViewCtrl;
 
+@property (weak, nonatomic) IBOutlet UIView *contentView;
+
+- (IBAction)changeViewsType:(id)sender;
 
 @end
 
 @implementation ViewController
-{
-    NewsSectionViewController *vc;
-}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+
+    [self addNewsPanel];
+}
+
+- (void)addNewsPanel
+{
+    self.type = NewsViewCtrlTypePanel;
+    
+    // create dummy data
+    NSMutableArray *newsList = [[NSMutableArray alloc] init];
+    for (int i = 0; i < 5 ; i++)
+    {
+        News *news = [[News alloc] init];
+        news.imageName = @"news.jpg";
+        news.title = [[NSString alloc] initWithFormat:@"title %i",i*10];
+        [newsList addObject:news];
+    }
+
+    // add panel
+    self.newsPanelViewCtrl = [[NewsPanelViewController alloc] initWithNewsList:newsList];
+    self.newsPanelViewCtrl.view.frame = self.contentView.bounds;
+    
+    CATransition *transition = [CATransition animation];
+    transition.type = kCATransitionFade;
+    transition.duration = 0.5;
+    transition.timingFunction = [CAMediaTimingFunction
+                                 functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    transition.type =kCATransitionFade;
+    [self.contentView.layer addAnimation:transition forKey:nil];
+    [self.contentView addSubview:self.newsPanelViewCtrl.view];
+}
+
+- (void)addNewsListWithAvailableNewsViewCtrl:(NSMutableArray*)availabeNewsViewCtrls
+{
+    self.type = NewsViewCtrlTypeList;
+    
+    // Create dummy data
+    NSMutableArray *sectionList = [[NSMutableArray alloc] init];
+
+    for (int i = 0; i < 7 ; i++)
+    {
+        NewsSection *section = [[NewsSection alloc] init];
+        section.sectionName = [NSString stringWithFormat:@"Section %i",i];
+        for (int j = 0; j < 10 ; j++) {
+            News *news = [[News alloc] init];
+            news.imageName = @"news.jpg";
+            news.title = [[NSString alloc] initWithFormat:@"title %i",j*10 + i];
+            [section.newsArray addObject:news];
+        }
+        [sectionList addObject:section];
+    }
+    
+    // add section list
+    self.newsSectionListViewCtrl = [[NewsSectionListViewController alloc] initWithSectionList:sectionList];
+    self.newsSectionListViewCtrl.view.frame = self.contentView.bounds;
+    [self.contentView addSubview:self.newsSectionListViewCtrl.view];
+    
+    // prepare image for translating
+    if (availabeNewsViewCtrls) {
+        for (NewsViewController *vc in availabeNewsViewCtrls)
+        {
+            CGRect newFrame = [self.newsSectionListViewCtrl.view convertRect:vc.view.frame fromView:vc.view.superview];
+            vc.view.frame = newFrame;
+            [self.newsSectionListViewCtrl.view addSubview:vc.view];
+        }
+        self.newsSectionListViewCtrl.availableNewsViewCtrlArray = availabeNewsViewCtrls;
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -38,69 +111,25 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)moveToView1:(id)sender {
+- (IBAction)changeViewsType:(id)sender {
     
-    // First create a CATransition object to describe the transition
-//    CATransition *transition = [CATransition animation];
-//    transition.duration = 1;
-//    transition.timingFunction = [CAMediaTimingFunction
-//                                 functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-//    transition.type =kCATransitionFade;
-//    transition.delegate = self;
-//    // Next add it to the containerView's layer. This will perform the transition based on how we change its contents.
-//    [self.view.layer addAnimation:transition forKey:nil];
-    
-    
-//    [UIView transitionWithView:_childView
-//                      duration:5
-//                       options:UIViewAnimationOptionTransitionNone
-//                    animations:^(){
-//                        _childView.hidden = NO;
-//                    }
-//                    completion:^(BOOL finished){
-//                    }
-//     ];
-    [UIView beginAnimations:nil context:nil];
-    [UIView setAnimationDuration:0.75];
-    [UIView setAnimationDelegate:self];
-//    [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:_childView cache:YES];
-    _childView.alpha = 1;
-    [UIView commitAnimations];
+    if (self.type == NewsViewCtrlTypePanel)
+    {
+        //TODO: Need to determine which newsViewCtrl is keeped
+        NSMutableArray *newsVCArray = [[NSMutableArray alloc] init];
+        [newsVCArray addObject:self.newsPanelViewCtrl.newsViewCtrlArray[0]];
+        [newsVCArray addObject:self.newsPanelViewCtrl.newsViewCtrlArray[1]];
+
+        [self addNewsListWithAvailableNewsViewCtrl:newsVCArray];
+        [self.newsPanelViewCtrl.view removeFromSuperview];
+        self.newsPanelViewCtrl = nil;
+    }
+    else
+    {
+        [self addNewsPanel];
+        [self.newsSectionListViewCtrl.view removeFromSuperview];
+        self.newsSectionListViewCtrl = nil;
+    }
 }
 
-- (IBAction)moveToView2:(id)sender {
-    NewsSection *section = [[NewsSection alloc] init];
-    section.sectionName = @"Section1";
-    for (int i = 0; i < 10 ; i++) {
-        News *news = [[News alloc] init];
-        news.imageName = @"news.jpg";
-        news.title = [[NSString alloc] initWithFormat:@"title %i",i];
-        news.isExisted = YES;
-        [section.newsArray addObject:news];
-    }
-    
-    vc = [[NewsSectionViewController alloc] initWithNibName:@"NewsHorizontalListViewController" bundle:nil newsList:section];
-    vc.view.frame = _containerView2.bounds;
-    vc.movingImageDelegate = self;
-    [_containerView2 addSubview:vc.view];
-    
-}
-- (void)moveNews:(News *)news toView:(UIView *)toView completionHandler:(CompletionBlock)completion
-{
-    UIImageView *imgV = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"news.jpg"]];
-    imgV.frame = CGRectMake(0, 0, 400, 400);
-    [self.view addSubview:imgV];
-    
-    CGRect endFrame = [self.view convertRect:toView.frame fromView:toView.superview];
-    [UIView animateWithDuration:ANIMATE_DURATION
-                     animations:^(){
-                         imgV.frame = endFrame;
-                     }
-                     completion:^(BOOL finished){
-                         completion();
-                         [imgV removeFromSuperview];
-                     }
-     ];
-    
-}
 @end

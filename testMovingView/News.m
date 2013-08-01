@@ -9,5 +9,12 @@
 #import "News.h"
 
 @implementation News
-
+- (BOOL)isEqual:(id)object
+{
+    if (![object isKindOfClass:[News class]]) {
+        return NO;
+    }
+    News *object_ = (News*)object;
+    return [self.title isEqualToString:object_.title];
+}
 @end

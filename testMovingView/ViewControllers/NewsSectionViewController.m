@@ -9,25 +9,29 @@
 #import "NewsSectionViewController.h"
 #import "News.h"
 #import "NewsSection.h"
+#import "NewsViewController.h"
 
 @interface NewsSectionViewController ()
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
-@property (nonatomic,strong) NewsSection *newsSection;
 @end
 
 @implementation NewsSectionViewController
 {
     int _currentImageIndex;
+    NSMutableArray *_newsViewCtrlArray;
 }
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil newsList:(NewsSection *)newsSection
+- (id)initWithNewsSection:(NewsSection*)newsSection
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super init];
     if (self) {
         // Custom initialization
         _newsSection = newsSection;
+        _newsViewCtrlArray = [[NSMutableArray alloc] init];
     }
     return self;
 }
+
+
 
 - (void)viewDidLoad
 {
@@ -39,38 +43,49 @@
 {
     [super viewDidAppear:animated];
     
+    [self buildNewsViews];
+    [self animateShowImage];
+}
+
+- (void)buildNewsViews
+{
     int topPadding = 1,botomPadding = 1;
     int space = 5;
     int imageWidth = 300;
     CGFloat usedWidth = 0;
     for (News *news in self.newsSection.newsArray)
     {
-        UIImage *img = [UIImage imageNamed:news.imageName];
-        UIImageView *imageView = [[UIImageView alloc] initWithImage:img];
-        imageView.frame = CGRectMake(usedWidth, topPadding, imageWidth, self.scrollView.frame.size.height - topPadding - botomPadding);
+        NewsViewController *newsViewCtrl = [[NewsViewController alloc] initWithNibName:@"NewsViewController" bundle:nil content:news];
+        
+        CGRect frame = CGRectMake(usedWidth, topPadding, imageWidth, self.scrollView.frame.size.height - topPadding - botomPadding);
+        newsViewCtrl.view.frame = frame;
+        
+        newsViewCtrl.view.alpha = 0;
+        
+        [self.scrollView addSubview:newsViewCtrl.view];
+        [_newsViewCtrlArray addObject:newsViewCtrl];
+        
         usedWidth += imageWidth + space;
-        imageView.alpha = 0;
-        [self.scrollView addSubview:imageView];
     }
     
     self.scrollView.contentSize = CGSizeMake(usedWidth, self.scrollView.frame.size.height);
-    [self animateShowImage];
 }
 
 - (void)animateShowImage
 {
     if (_currentImageIndex < self.newsSection.newsArray.count) {
         News *news = (News*)self.newsSection.newsArray[_currentImageIndex];
-        if (news.isExisted)
-        {
-            [self.movingImageDelegate moveNews:news
-                                        toView:self.scrollView.subviews[_currentImageIndex]
+        
+        if ([self.newsSectionViewControllerDelegate shouldAnimateShowNews:news
+                                        inView:self.scrollView.subviews[_currentImageIndex]
                              completionHandler:^(){
                                  ((UIView*)self.scrollView.subviews[_currentImageIndex]).alpha = 1;
                                  _currentImageIndex++;
                                  [self animateShowImage];
                              }
-             ];
+             ])
+        {
+            
         }
         else
         {

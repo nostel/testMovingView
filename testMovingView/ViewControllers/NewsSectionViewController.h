@@ -8,15 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-#define ANIMATE_DURATION 0.5
+#define ANIMATE_DURATION 0.4
 
 @class News,NewsSection;
 typedef void (^ CompletionBlock)();
-@protocol movingImageDelegate
-- (void)moveNews:(News*)news toView:(UIView*)toView completionHandler:(CompletionBlock)completion;
+@protocol NewsSectionViewControllerDelegate
+- (BOOL)shouldAnimateShowNews:(News*)news inView:(UIView*)inView completionHandler:(CompletionBlock)completion;
+- (void)didFinishedAnimateShowNews;
 @end
 
 @interface NewsSectionViewController : UIViewController
-@property (weak) id<movingImageDelegate> movingImageDelegate;
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil newsList:(NewsSection*)newsSection;
+@property (weak) id<NewsSectionViewControllerDelegate> newsSectionViewControllerDelegate;
+@property (nonatomic,strong) NewsSection *newsSection;
+
+- (id)initWithNewsSection:(NewsSection*)newsSection;
+
 @end

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B1F0CA517A9DE1600962EF4 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1F0CA317A9DE1600962EF4 /* NewsViewController.m */; };
+		5B1F0CA617A9DE1600962EF4 /* NewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B1F0CA417A9DE1600962EF4 /* NewsViewController.xib */; };
 		5BA0EA5717A935D800E1CC41 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BA0EA5617A935D800E1CC41 /* UIKit.framework */; };
 		5BA0EA5917A935D800E1CC41 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BA0EA5817A935D800E1CC41 /* Foundation.framework */; };
 		5BA0EA5B17A935D800E1CC41 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BA0EA5A17A935D800E1CC41 /* CoreGraphics.framework */; };
@@ -29,6 +31,10 @@
 		5BA0EA9B17A944F700E1CC41 /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA0EA9A17A944F700E1CC41 /* News.m */; };
 		5BA0EA9E17A949B500E1CC41 /* news.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5BA0EA9D17A949B500E1CC41 /* news.jpg */; };
 		5BA0EAA217A968AC00E1CC41 /* NewsSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA0EAA117A968AC00E1CC41 /* NewsSection.m */; };
+		5BA16D6A17AA920E00948002 /* NewsPanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA16D6817AA920E00948002 /* NewsPanelViewController.m */; };
+		5BA16D6B17AA920E00948002 /* NewsPanelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BA16D6917AA920E00948002 /* NewsPanelViewController.xib */; };
+		5BA16D6F17AA922A00948002 /* NewsSectionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA16D6D17AA922A00948002 /* NewsSectionListViewController.m */; };
+		5BA16D7017AA922A00948002 /* NewsSectionListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BA16D6E17AA922A00948002 /* NewsSectionListViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +48,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B1F0CA217A9DE1600962EF4 /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
+		5B1F0CA317A9DE1600962EF4 /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
+		5B1F0CA417A9DE1600962EF4 /* NewsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsViewController.xib; sourceTree = "<group>"; };
 		5BA0EA5317A935D800E1CC41 /* testMovingView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testMovingView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BA0EA5617A935D800E1CC41 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5BA0EA5817A935D800E1CC41 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -73,6 +82,12 @@
 		5BA0EA9D17A949B500E1CC41 /* news.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = news.jpg; path = ../../../news.jpg; sourceTree = "<group>"; };
 		5BA0EAA017A968AC00E1CC41 /* NewsSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsSection.h; sourceTree = "<group>"; };
 		5BA0EAA117A968AC00E1CC41 /* NewsSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsSection.m; sourceTree = "<group>"; };
+		5BA16D6717AA920E00948002 /* NewsPanelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsPanelViewController.h; sourceTree = "<group>"; };
+		5BA16D6817AA920E00948002 /* NewsPanelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsPanelViewController.m; sourceTree = "<group>"; };
+		5BA16D6917AA920E00948002 /* NewsPanelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsPanelViewController.xib; sourceTree = "<group>"; };
+		5BA16D6C17AA922A00948002 /* NewsSectionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsSectionListViewController.h; sourceTree = "<group>"; };
+		5BA16D6D17AA922A00948002 /* NewsSectionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsSectionListViewController.m; sourceTree = "<group>"; };
+		5BA16D6E17AA922A00948002 /* NewsSectionListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsSectionListViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +201,15 @@
 				5BA0EA9317A9439600E1CC41 /* NewsSectionViewController.h */,
 				5BA0EA9417A9439600E1CC41 /* NewsSectionViewController.m */,
 				5BA0EA9517A9439600E1CC41 /* NewsSectionViewController.xib */,
+				5B1F0CA217A9DE1600962EF4 /* NewsViewController.h */,
+				5B1F0CA317A9DE1600962EF4 /* NewsViewController.m */,
+				5B1F0CA417A9DE1600962EF4 /* NewsViewController.xib */,
+				5BA16D6717AA920E00948002 /* NewsPanelViewController.h */,
+				5BA16D6817AA920E00948002 /* NewsPanelViewController.m */,
+				5BA16D6917AA920E00948002 /* NewsPanelViewController.xib */,
+				5BA16D6C17AA922A00948002 /* NewsSectionListViewController.h */,
+				5BA16D6D17AA922A00948002 /* NewsSectionListViewController.m */,
+				5BA16D6E17AA922A00948002 /* NewsSectionListViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -287,6 +311,9 @@
 				5BA0EA7317A935D900E1CC41 /* ViewController.xib in Resources */,
 				5BA0EA9717A9439600E1CC41 /* NewsSectionViewController.xib in Resources */,
 				5BA0EA9E17A949B500E1CC41 /* news.jpg in Resources */,
+				5B1F0CA617A9DE1600962EF4 /* NewsViewController.xib in Resources */,
+				5BA16D6B17AA920E00948002 /* NewsPanelViewController.xib in Resources */,
+				5BA16D7017AA922A00948002 /* NewsSectionListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +354,9 @@
 				5BA0EA9617A9439600E1CC41 /* NewsSectionViewController.m in Sources */,
 				5BA0EA9B17A944F700E1CC41 /* News.m in Sources */,
 				5BA0EAA217A968AC00E1CC41 /* NewsSection.m in Sources */,
+				5B1F0CA517A9DE1600962EF4 /* NewsViewController.m in Sources */,
+				5BA16D6A17AA920E00948002 /* NewsPanelViewController.m in Sources */,
+				5BA16D6F17AA922A00948002 /* NewsSectionListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,6 +539,7 @@
 				5BA0EA8D17A935D900E1CC41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5BA0EA8E17A935D900E1CC41 /* Build configuration list for PBXNativeTarget "testMovingViewTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +548,7 @@
 				5BA0EA9017A935D900E1CC41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
