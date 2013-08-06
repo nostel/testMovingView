@@ -50,7 +50,7 @@ typedef enum {
     {
         News *news = [[News alloc] init];
         news.imageName = @"news.jpg";
-        news.title = [[NSString alloc] initWithFormat:@"title %i",i*10];
+        news.title = [[NSString alloc] initWithFormat:@"title %i",i*10+i];
         [newsList addObject:news];
     }
 
@@ -93,7 +93,7 @@ typedef enum {
     self.newsSectionListViewCtrl.view.frame = self.contentView.bounds;
     [self.contentView addSubview:self.newsSectionListViewCtrl.view];
     
-    // prepare image for translating
+    // prepare view for translating
     if (availabeNewsViewCtrls) {
         for (NewsViewController *vc in availabeNewsViewCtrls)
         {
