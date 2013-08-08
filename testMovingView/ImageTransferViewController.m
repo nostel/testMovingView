@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Le Tuan Son. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "ImageTransferViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "News.h"
 #import "NewsSection.h"
@@ -19,7 +19,7 @@ typedef enum {
     NewsViewCtrlTypeList
 } NewsViewCtrlType;
 
-@interface ViewController ()
+@interface ImageTransferViewController ()
 @property NewsViewCtrlType type;
 @property (nonatomic,strong) NewsSectionListViewController *newsSectionListViewCtrl;
 @property (nonatomic,strong) NewsPanelViewController *newsPanelViewCtrl;
@@ -30,7 +30,11 @@ typedef enum {
 
 @end
 
-@implementation ViewController
+@implementation ImageTransferViewController
+
++ (NSString *)friendlyName {
+    return @"Moving View";
+}
 
 - (void)viewDidLoad
 {

@@ -18,8 +18,8 @@
 		5BA0EA6917A935D800E1CC41 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BA0EA6817A935D800E1CC41 /* Default.png */; };
 		5BA0EA6B17A935D800E1CC41 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BA0EA6A17A935D800E1CC41 /* Default@2x.png */; };
 		5BA0EA6D17A935D900E1CC41 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BA0EA6C17A935D900E1CC41 /* Default-568h@2x.png */; };
-		5BA0EA7017A935D900E1CC41 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA0EA6F17A935D900E1CC41 /* ViewController.m */; };
-		5BA0EA7317A935D900E1CC41 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BA0EA7117A935D900E1CC41 /* ViewController.xib */; };
+		5BA0EA7017A935D900E1CC41 /* ImageTransferViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA0EA6F17A935D900E1CC41 /* ImageTransferViewController.m */; };
+		5BA0EA7317A935D900E1CC41 /* ImageTransferViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BA0EA7117A935D900E1CC41 /* ImageTransferViewController.xib */; };
 		5BA0EA7B17A935D900E1CC41 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BA0EA7A17A935D900E1CC41 /* SenTestingKit.framework */; };
 		5BA0EA7C17A935D900E1CC41 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BA0EA5617A935D800E1CC41 /* UIKit.framework */; };
 		5BA0EA7D17A935D900E1CC41 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BA0EA5817A935D800E1CC41 /* Foundation.framework */; };
@@ -35,6 +35,13 @@
 		5BA16D7417AABDB000948002 /* NewsSectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA16D7217AABDB000948002 /* NewsSectionViewController.m */; };
 		5BA16D7517AABDB000948002 /* NewsSectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BA16D7317AABDB000948002 /* NewsSectionViewController.xib */; };
 		5BA16D7717AABF6E00948002 /* news.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5BA16D7617AABF6E00948002 /* news.jpg */; };
+		C6FD7FFE17B1EA4800C31F6C /* SampleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C6FD7FFD17B1EA4800C31F6C /* SampleManager.m */; };
+		C6FD800117B1EA6000C31F6C /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6FD800017B1EA6000C31F6C /* RootViewController.m */; };
+		C6FD800617B1F1AB00C31F6C /* MystifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6FD800417B1F1AB00C31F6C /* MystifyViewController.m */; };
+		C6FD800717B1F1AB00C31F6C /* MystifyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6FD800517B1F1AB00C31F6C /* MystifyViewController.xib */; };
+		C6FD800A17B1F4BC00C31F6C /* MystifyView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6FD800917B1F4BC00C31F6C /* MystifyView.m */; };
+		C6FD800D17B1FA9F00C31F6C /* MystifyPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = C6FD800C17B1FA9F00C31F6C /* MystifyPoint.m */; };
+		C6FD801017B21C0900C31F6C /* MystifyPolygon.m in Sources */ = {isa = PBXBuildFile; fileRef = C6FD800F17B21C0900C31F6C /* MystifyPolygon.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,9 +71,9 @@
 		5BA0EA6817A935D800E1CC41 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		5BA0EA6A17A935D800E1CC41 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		5BA0EA6C17A935D900E1CC41 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		5BA0EA6E17A935D900E1CC41 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5BA0EA6F17A935D900E1CC41 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		5BA0EA7217A935D900E1CC41 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		5BA0EA6E17A935D900E1CC41 /* ImageTransferViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageTransferViewController.h; sourceTree = "<group>"; };
+		5BA0EA6F17A935D900E1CC41 /* ImageTransferViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageTransferViewController.m; sourceTree = "<group>"; };
+		5BA0EA7217A935D900E1CC41 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ImageTransferViewController.xib; sourceTree = "<group>"; };
 		5BA0EA7917A935D900E1CC41 /* testMovingViewTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testMovingViewTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BA0EA7A17A935D900E1CC41 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		5BA0EA8217A935D900E1CC41 /* testMovingViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "testMovingViewTests-Info.plist"; sourceTree = "<group>"; };
@@ -88,6 +95,19 @@
 		5BA16D7217AABDB000948002 /* NewsSectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsSectionViewController.m; sourceTree = "<group>"; };
 		5BA16D7317AABDB000948002 /* NewsSectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsSectionViewController.xib; sourceTree = "<group>"; };
 		5BA16D7617AABF6E00948002 /* news.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = news.jpg; sourceTree = "<group>"; };
+		C6FD7FFC17B1EA4800C31F6C /* SampleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleManager.h; sourceTree = "<group>"; };
+		C6FD7FFD17B1EA4800C31F6C /* SampleManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleManager.m; sourceTree = "<group>"; };
+		C6FD7FFF17B1EA6000C31F6C /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		C6FD800017B1EA6000C31F6C /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		C6FD800317B1F1AB00C31F6C /* MystifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MystifyViewController.h; sourceTree = "<group>"; };
+		C6FD800417B1F1AB00C31F6C /* MystifyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MystifyViewController.m; sourceTree = "<group>"; };
+		C6FD800517B1F1AB00C31F6C /* MystifyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MystifyViewController.xib; sourceTree = "<group>"; };
+		C6FD800817B1F4BC00C31F6C /* MystifyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MystifyView.h; sourceTree = "<group>"; };
+		C6FD800917B1F4BC00C31F6C /* MystifyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MystifyView.m; sourceTree = "<group>"; };
+		C6FD800B17B1FA9F00C31F6C /* MystifyPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MystifyPoint.h; sourceTree = "<group>"; };
+		C6FD800C17B1FA9F00C31F6C /* MystifyPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MystifyPoint.m; sourceTree = "<group>"; };
+		C6FD800E17B21C0900C31F6C /* MystifyPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MystifyPolygon.h; sourceTree = "<group>"; };
+		C6FD800F17B21C0900C31F6C /* MystifyPolygon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MystifyPolygon.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,12 +171,14 @@
 			children = (
 				5BA0EA9F17A9687A00E1CC41 /* Data */,
 				5BA0EA9C17A9499F00E1CC41 /* Resources */,
-				5BA0EA9817A943A500E1CC41 /* ViewControllers */,
+				C6FD800217B1EFEF00C31F6C /* ScreenSaver */,
+				5BA0EA9817A943A500E1CC41 /* ImageTransfer */,
+				C6FD7FFF17B1EA6000C31F6C /* RootViewController.h */,
+				C6FD800017B1EA6000C31F6C /* RootViewController.m */,
+				C6FD7FFC17B1EA4800C31F6C /* SampleManager.h */,
+				C6FD7FFD17B1EA4800C31F6C /* SampleManager.m */,
 				5BA0EA6517A935D800E1CC41 /* AppDelegate.h */,
 				5BA0EA6617A935D800E1CC41 /* AppDelegate.m */,
-				5BA0EA6E17A935D900E1CC41 /* ViewController.h */,
-				5BA0EA6F17A935D900E1CC41 /* ViewController.m */,
-				5BA0EA7117A935D900E1CC41 /* ViewController.xib */,
 				5BA0EA5D17A935D800E1CC41 /* Supporting Files */,
 			);
 			path = testMovingView;
@@ -195,7 +217,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		5BA0EA9817A943A500E1CC41 /* ViewControllers */ = {
+		5BA0EA9817A943A500E1CC41 /* ImageTransfer */ = {
 			isa = PBXGroup;
 			children = (
 				5BA16D7117AABDB000948002 /* NewsSectionViewController.h */,
@@ -210,8 +232,11 @@
 				5BA16D6C17AA922A00948002 /* NewsSectionListViewController.h */,
 				5BA16D6D17AA922A00948002 /* NewsSectionListViewController.m */,
 				5BA16D6E17AA922A00948002 /* NewsSectionListViewController.xib */,
+				5BA0EA6E17A935D900E1CC41 /* ImageTransferViewController.h */,
+				5BA0EA6F17A935D900E1CC41 /* ImageTransferViewController.m */,
+				5BA0EA7117A935D900E1CC41 /* ImageTransferViewController.xib */,
 			);
-			name = ViewControllers;
+			name = ImageTransfer;
 			sourceTree = "<group>";
 		};
 		5BA0EA9C17A9499F00E1CC41 /* Resources */ = {
@@ -231,6 +256,22 @@
 				5BA0EA9A17A944F700E1CC41 /* News.m */,
 			);
 			name = Data;
+			sourceTree = "<group>";
+		};
+		C6FD800217B1EFEF00C31F6C /* ScreenSaver */ = {
+			isa = PBXGroup;
+			children = (
+				C6FD800317B1F1AB00C31F6C /* MystifyViewController.h */,
+				C6FD800417B1F1AB00C31F6C /* MystifyViewController.m */,
+				C6FD800517B1F1AB00C31F6C /* MystifyViewController.xib */,
+				C6FD800817B1F4BC00C31F6C /* MystifyView.h */,
+				C6FD800917B1F4BC00C31F6C /* MystifyView.m */,
+				C6FD800B17B1FA9F00C31F6C /* MystifyPoint.h */,
+				C6FD800C17B1FA9F00C31F6C /* MystifyPoint.m */,
+				C6FD800E17B21C0900C31F6C /* MystifyPolygon.h */,
+				C6FD800F17B21C0900C31F6C /* MystifyPolygon.m */,
+			);
+			name = ScreenSaver;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,12 +349,13 @@
 				5BA0EA6917A935D800E1CC41 /* Default.png in Resources */,
 				5BA0EA6B17A935D800E1CC41 /* Default@2x.png in Resources */,
 				5BA0EA6D17A935D900E1CC41 /* Default-568h@2x.png in Resources */,
-				5BA0EA7317A935D900E1CC41 /* ViewController.xib in Resources */,
+				5BA0EA7317A935D900E1CC41 /* ImageTransferViewController.xib in Resources */,
 				5B1F0CA617A9DE1600962EF4 /* NewsViewController.xib in Resources */,
 				5BA16D6B17AA920E00948002 /* NewsPanelViewController.xib in Resources */,
 				5BA16D7017AA922A00948002 /* NewsSectionListViewController.xib in Resources */,
 				5BA16D7517AABDB000948002 /* NewsSectionViewController.xib in Resources */,
 				5BA16D7717AABF6E00948002 /* news.jpg in Resources */,
+				C6FD800717B1F1AB00C31F6C /* MystifyViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,13 +392,19 @@
 			files = (
 				5BA0EA6317A935D800E1CC41 /* main.m in Sources */,
 				5BA0EA6717A935D800E1CC41 /* AppDelegate.m in Sources */,
-				5BA0EA7017A935D900E1CC41 /* ViewController.m in Sources */,
+				5BA0EA7017A935D900E1CC41 /* ImageTransferViewController.m in Sources */,
 				5BA0EA9B17A944F700E1CC41 /* News.m in Sources */,
 				5BA0EAA217A968AC00E1CC41 /* NewsSection.m in Sources */,
 				5B1F0CA517A9DE1600962EF4 /* NewsViewController.m in Sources */,
 				5BA16D6A17AA920E00948002 /* NewsPanelViewController.m in Sources */,
 				5BA16D6F17AA922A00948002 /* NewsSectionListViewController.m in Sources */,
 				5BA16D7417AABDB000948002 /* NewsSectionViewController.m in Sources */,
+				C6FD7FFE17B1EA4800C31F6C /* SampleManager.m in Sources */,
+				C6FD800117B1EA6000C31F6C /* RootViewController.m in Sources */,
+				C6FD800617B1F1AB00C31F6C /* MystifyViewController.m in Sources */,
+				C6FD800A17B1F4BC00C31F6C /* MystifyView.m in Sources */,
+				C6FD800D17B1FA9F00C31F6C /* MystifyPoint.m in Sources */,
+				C6FD801017B21C0900C31F6C /* MystifyPolygon.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,12 +435,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		5BA0EA7117A935D900E1CC41 /* ViewController.xib */ = {
+		5BA0EA7117A935D900E1CC41 /* ImageTransferViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				5BA0EA7217A935D900E1CC41 /* en */,
 			);
-			name = ViewController.xib;
+			name = ImageTransferViewController.xib;
 			sourceTree = "<group>";
 		};
 		5BA0EA8317A935D900E1CC41 /* InfoPlist.strings */ = {
