@@ -86,8 +86,18 @@
     return ((NewsSection*)self.sectionList[section]).sectionName;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return 30;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    return [[UIView alloc] init];
+}
+
 #pragma mark - delegation
-- (BOOL)shouldAnimateShowNews:(News*)news inView:(UIView*)inView completionHandler:(CompletionBlock)completion;
+- (BOOL)shouldAnimateShowNews:(News*)news inView:(UIView*)inView
 {
     for (NewsViewController *vc in self.availableNewsViewCtrlArray)
     {
@@ -99,7 +109,6 @@
                                  vc.view.frame = endFrame;
                              }
                              completion:^(BOOL finished){
-                                 completion();
                                  [vc.view removeFromSuperview];
                                  [self.availableNewsViewCtrlArray removeObject:vc];
                              }

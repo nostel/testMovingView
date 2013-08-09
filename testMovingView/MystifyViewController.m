@@ -39,8 +39,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     _mystifyView = [[MystifyView alloc] initWithFrame:_mystifyViewContainer.bounds];
-    _mystifyView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
-    _mystifyView.backgroundColor = [UIColor blackColor];
+    _mystifyView.autoresizingMask   = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
+    _mystifyView.layer.borderWidth  = 1;
+    _mystifyView.layer.cornerRadius = 5;
+    
+    _mystifyView.backgroundColor = [UIColor grayColor];
     [_mystifyViewContainer addSubview:_mystifyView];
 }
 

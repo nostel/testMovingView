@@ -13,7 +13,7 @@
 @class News,NewsSection;
 typedef void (^ CompletionBlock)();
 @protocol NewsSectionViewControllerDelegate
-- (BOOL)shouldAnimateShowNews:(News*)news inView:(UIView*)inView completionHandler:(CompletionBlock)completion;
+- (BOOL)shouldAnimateShowNews:(News*)news inView:(UIView*)inView;
 - (void)didFinishedAnimateShowNews;
 @end
 

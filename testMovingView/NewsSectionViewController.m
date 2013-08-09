@@ -78,14 +78,9 @@
         
         if ([self.newsSectionViewControllerDelegate shouldAnimateShowNews:news
                                         inView:self.scrollView.subviews[_currentImageIndex]
-                             completionHandler:^(){
-                                 ((UIView*)self.scrollView.subviews[_currentImageIndex]).alpha = 1;
-                                 _currentImageIndex++;
-                                 [self animateShowImage];
-                             }
              ])
         {
-            
+            [self performSelector:@selector(delayedAnimateShowImage) withObject:self afterDelay:ANIMATE_DURATION];
         }
         else
         {
@@ -102,6 +97,13 @@
              ];
         }
     }
+}
+
+- (void)delayedAnimateShowImage
+{
+    ((UIView*)self.scrollView.subviews[_currentImageIndex]).alpha = 1;
+    _currentImageIndex++;
+    [self animateShowImage];
 }
 
 - (void)didReceiveMemoryWarning
