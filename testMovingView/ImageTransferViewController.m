@@ -44,6 +44,15 @@ typedef enum {
     [self addNewsPanel];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] init];
+    barButton.title = @"change";
+    barButton.target = self;
+    barButton.action = @selector(changeViewsType:);
+    self.navigationItem.rightBarButtonItem = barButton;
+}
+
 - (void)addNewsPanel
 {
     self.type = NewsViewCtrlTypePanel;

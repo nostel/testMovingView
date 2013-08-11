@@ -51,7 +51,13 @@
 {
     int topPadding = 1,botomPadding = 1;
     int space = 5;
-    int imageWidth = 300;
+    int imageWidth;
+    if ((UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)) {
+        imageWidth = 300;
+    }
+    else {
+        imageWidth = 150;
+    }
     CGFloat usedWidth = 0;
     for (News *news in self.newsSection.newsArray)
     {

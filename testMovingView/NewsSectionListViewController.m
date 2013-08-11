@@ -67,7 +67,12 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 300;
+    if ((UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)) {
+        return 300;
+    }
+    else {
+        return 150;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -86,15 +91,6 @@
     return ((NewsSection*)self.sectionList[section]).sectionName;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
-{
-    return 30;
-}
-
-- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
-{
-    return [[UIView alloc] init];
-}
 
 #pragma mark - delegation
 - (BOOL)shouldAnimateShowNews:(News*)news inView:(UIView*)inView
