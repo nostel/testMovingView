@@ -83,15 +83,33 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return 30;
+    return 25;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+//{
+//    return ((NewsSection*)self.sectionList[section]).sectionName;
+//}
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    return ((NewsSection*)self.sectionList[section]).sectionName;
+    UILabel *label = [UILabel new];
+    label.text = ((NewsSection*)self.sectionList[section]).sectionName;
+    label.textColor = [UIColor redColor];
+    label.font = [UIFont systemFontOfSize:17];
+    label.backgroundColor = [UIColor clearColor];
+    [label sizeToFit];
+    return label;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return 25;
+}
 
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    return [UIView new];
+}
 #pragma mark - delegation
 - (BOOL)shouldAnimateShowNews:(News*)news inView:(UIView*)inView
 {

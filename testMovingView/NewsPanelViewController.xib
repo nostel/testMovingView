@@ -37,20 +37,20 @@
 					<object class="IBUIView" id="133580843">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">310</int>
-						<string key="NSFrameSize">{200, 400}</string>
+						<string key="NSFrame">{{5, 5}, {190, 390}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSNextKeyView" ref="622754118"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<object class="NSColor" key="IBUIBackgroundColor" id="519617204">
+						<object class="NSColor" key="IBUIBackgroundColor" id="670642260">
 							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MSAwIDAAA</bytes>
+							<bytes key="NSRGB">MSAxIDEAA</bytes>
 						</object>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 					</object>
 					<object class="IBUIView" id="622754118">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">311</int>
-						<string key="NSFrame">{{200, 0}, {200, 400}}</string>
+						<string key="NSFrame">{{200, 5}, {200, 390}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSNextKeyView" ref="271870980"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -66,36 +66,33 @@
 					<object class="IBUIView" id="271870980">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">307</int>
-						<string key="NSFrame">{{400, 0}, {200, 400}}</string>
+						<string key="NSFrame">{{405, 5}, {190, 390}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSNextKeyView" ref="218088348"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<reference key="IBUIBackgroundColor" ref="519617204"/>
+						<object class="NSColor" key="IBUIBackgroundColor" id="384978414">
+							<int key="NSColorSpace">3</int>
+							<bytes key="NSWhite">MQA</bytes>
+						</object>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 					</object>
 					<object class="IBUIView" id="218088348">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">286</int>
-						<string key="NSFrame">{{0, 400}, {300, 400}}</string>
+						<string key="NSFrame">{{5, 405}, {290, 390}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSNextKeyView" ref="881490123"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<object class="NSColor" key="IBUIBackgroundColor">
-							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MCAxIDAAA</bytes>
-						</object>
+						<reference key="IBUIBackgroundColor" ref="670642260"/>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 					</object>
 					<object class="IBUIView" id="881490123">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">283</int>
-						<string key="NSFrame">{{300, 400}, {300, 400}}</string>
+						<string key="NSFrame">{{305, 405}, {290, 390}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<object class="NSColor" key="IBUIBackgroundColor">
-							<int key="NSColorSpace">2</int>
-							<bytes key="NSRGB">MC45OTIxNTY5MjI4IDAuODQzMTM3MzIzOSAwLjI5MDE5NjA5MDkAA</bytes>
-						</object>
+						<reference key="IBUIBackgroundColor" ref="384978414"/>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 					</object>
 				</array>
@@ -195,8 +192,8 @@
 							<reference ref="133580843"/>
 							<reference ref="622754118"/>
 							<reference ref="271870980"/>
-							<reference ref="218088348"/>
 							<reference ref="881490123"/>
+							<reference ref="218088348"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>

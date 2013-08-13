@@ -66,7 +66,9 @@
         
         newsViewCtrl.view.frame = slot.bounds;
         
+        [newsViewCtrl viewWillAppear:YES];
         [slot addSubview:newsViewCtrl.view];
+        [newsViewCtrl viewDidAppear:YES];
         [_newsViewCtrlArray addObject:newsViewCtrl];
         
         indexOfCurrentNewsSlot++;

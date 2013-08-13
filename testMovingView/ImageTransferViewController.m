@@ -73,7 +73,7 @@ typedef enum {
     
     CATransition *transition = [CATransition animation];
     transition.type = kCATransitionFade;
-    transition.duration = 0.5;
+    transition.duration = 1;
     transition.timingFunction = [CAMediaTimingFunction
                                  functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     transition.type =kCATransitionFade;

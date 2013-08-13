@@ -10,6 +10,7 @@
 #import "News.h"
 #import "NewsSection.h"
 #import "NewsViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface NewsSectionViewController ()
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
@@ -97,6 +98,8 @@
                              ((UIView*)self.scrollView.subviews[_currentImageIndex]).alpha = 1;
                          }
                          completion:^(BOOL finished){
+                             ((UIView*)self.scrollView.subviews[_currentImageIndex]).layer.borderWidth = 5;
+                             ((UIView*)self.scrollView.subviews[_currentImageIndex]).layer.borderColor = [UIColor whiteColor].CGColor;
                              _currentImageIndex++;
                              [self animateShowImage];
                          }
@@ -108,6 +111,8 @@
 - (void)delayedAnimateShowImage
 {
     ((UIView*)self.scrollView.subviews[_currentImageIndex]).alpha = 1;
+    ((UIView*)self.scrollView.subviews[_currentImageIndex]).layer.borderWidth = 5;
+    ((UIView*)self.scrollView.subviews[_currentImageIndex]).layer.borderColor = [UIColor whiteColor].CGColor;
     _currentImageIndex++;
     [self animateShowImage];
 }

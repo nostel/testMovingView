@@ -49,6 +49,30 @@
     [self loadContent];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    if (animated) {
+        [self moveInFromLeftAndReveal];
+    }
+}
+
+- (void)moveInFromLeftAndReveal
+{
+    CGRect startFrame,endFrame;
+    endFrame    = self.view.frame;
+    startFrame  = CGRectMake(CGRectGetMinX(endFrame) + CGRectGetWidth(endFrame), CGRectGetMinY(endFrame), CGRectGetWidth(endFrame), CGRectGetHeight(endFrame));
+    
+    self.view.frame = startFrame;
+    self.view.alpha = 0;
+    
+    [UIView animateWithDuration:0.5 animations:^(){
+        self.view.frame = endFrame;
+        self.view.alpha = 1;
+    }];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
