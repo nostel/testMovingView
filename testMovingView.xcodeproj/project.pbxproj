@@ -35,6 +35,17 @@
 		5BA16D7417AABDB000948002 /* NewsSectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA16D7217AABDB000948002 /* NewsSectionViewController.m */; };
 		5BA16D7517AABDB000948002 /* NewsSectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BA16D7317AABDB000948002 /* NewsSectionViewController.xib */; };
 		5BA16D7717AABF6E00948002 /* news.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5BA16D7617AABF6E00948002 /* news.jpg */; };
+		C6D048E717BB570F00A91556 /* AZDrawingFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D048D417BB570E00A91556 /* AZDrawingFunctions.m */; };
+		C6D048E817BB570F00A91556 /* AZGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D048D617BB570E00A91556 /* AZGradient.m */; };
+		C6D048E917BB570F00A91556 /* AZGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D048D817BB570E00A91556 /* AZGradientView.m */; };
+		C6D048EA17BB570F00A91556 /* AZLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D048DA17BB570E00A91556 /* AZLabel.m */; };
+		C6D048EB17BB570F00A91556 /* AZNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D048DC17BB570F00A91556 /* AZNavigationBar.m */; };
+		C6D048EC17BB570F00A91556 /* AZShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D048DE17BB570F00A91556 /* AZShadow.m */; };
+		C6D048ED17BB570F00A91556 /* AZShadowedTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D048E017BB570F00A91556 /* AZShadowedTableView.m */; };
+		C6D048EE17BB570F00A91556 /* AZTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D048E217BB570F00A91556 /* AZTabBar.m */; };
+		C6D048EF17BB570F00A91556 /* AZTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D048E417BB570F00A91556 /* AZTableViewCell.m */; };
+		C6D048F017BB570F00A91556 /* AZToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D048E617BB570F00A91556 /* AZToolbar.m */; };
+		C6D048F217BB58F100A91556 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D048F117BB58F100A91556 /* CoreText.framework */; };
 		C6FD7FFE17B1EA4800C31F6C /* SampleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C6FD7FFD17B1EA4800C31F6C /* SampleManager.m */; };
 		C6FD800117B1EA6000C31F6C /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6FD800017B1EA6000C31F6C /* RootViewController.m */; };
 		C6FD800617B1F1AB00C31F6C /* MystifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6FD800417B1F1AB00C31F6C /* MystifyViewController.m */; };
@@ -95,6 +106,27 @@
 		5BA16D7217AABDB000948002 /* NewsSectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsSectionViewController.m; sourceTree = "<group>"; };
 		5BA16D7317AABDB000948002 /* NewsSectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsSectionViewController.xib; sourceTree = "<group>"; };
 		5BA16D7617AABF6E00948002 /* news.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = news.jpg; sourceTree = "<group>"; };
+		C6D048D317BB570E00A91556 /* AZDrawingFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AZDrawingFunctions.h; sourceTree = "<group>"; };
+		C6D048D417BB570E00A91556 /* AZDrawingFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AZDrawingFunctions.m; sourceTree = "<group>"; };
+		C6D048D517BB570E00A91556 /* AZGradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AZGradient.h; sourceTree = "<group>"; };
+		C6D048D617BB570E00A91556 /* AZGradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AZGradient.m; sourceTree = "<group>"; };
+		C6D048D717BB570E00A91556 /* AZGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AZGradientView.h; sourceTree = "<group>"; };
+		C6D048D817BB570E00A91556 /* AZGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AZGradientView.m; sourceTree = "<group>"; };
+		C6D048D917BB570E00A91556 /* AZLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AZLabel.h; sourceTree = "<group>"; };
+		C6D048DA17BB570E00A91556 /* AZLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AZLabel.m; sourceTree = "<group>"; };
+		C6D048DB17BB570E00A91556 /* AZNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AZNavigationBar.h; sourceTree = "<group>"; };
+		C6D048DC17BB570F00A91556 /* AZNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AZNavigationBar.m; sourceTree = "<group>"; };
+		C6D048DD17BB570F00A91556 /* AZShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AZShadow.h; sourceTree = "<group>"; };
+		C6D048DE17BB570F00A91556 /* AZShadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AZShadow.m; sourceTree = "<group>"; };
+		C6D048DF17BB570F00A91556 /* AZShadowedTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AZShadowedTableView.h; sourceTree = "<group>"; };
+		C6D048E017BB570F00A91556 /* AZShadowedTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AZShadowedTableView.m; sourceTree = "<group>"; };
+		C6D048E117BB570F00A91556 /* AZTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AZTabBar.h; sourceTree = "<group>"; };
+		C6D048E217BB570F00A91556 /* AZTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AZTabBar.m; sourceTree = "<group>"; };
+		C6D048E317BB570F00A91556 /* AZTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AZTableViewCell.h; sourceTree = "<group>"; };
+		C6D048E417BB570F00A91556 /* AZTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AZTableViewCell.m; sourceTree = "<group>"; };
+		C6D048E517BB570F00A91556 /* AZToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AZToolbar.h; sourceTree = "<group>"; };
+		C6D048E617BB570F00A91556 /* AZToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AZToolbar.m; sourceTree = "<group>"; };
+		C6D048F117BB58F100A91556 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		C6FD7FFC17B1EA4800C31F6C /* SampleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleManager.h; sourceTree = "<group>"; };
 		C6FD7FFD17B1EA4800C31F6C /* SampleManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleManager.m; sourceTree = "<group>"; };
 		C6FD7FFF17B1EA6000C31F6C /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
@@ -115,6 +147,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6D048F217BB58F100A91556 /* CoreText.framework in Frameworks */,
 				5BA0EA9217A9388000E1CC41 /* QuartzCore.framework in Frameworks */,
 				5BA0EA5717A935D800E1CC41 /* UIKit.framework in Frameworks */,
 				5BA0EA5917A935D800E1CC41 /* Foundation.framework in Frameworks */,
@@ -138,6 +171,7 @@
 		5BA0EA4A17A935D800E1CC41 = {
 			isa = PBXGroup;
 			children = (
+				C6D048F117BB58F100A91556 /* CoreText.framework */,
 				5BA0EA5C17A935D800E1CC41 /* testMovingView */,
 				5BA0EA8017A935D900E1CC41 /* testMovingViewTests */,
 				5BA0EA5517A935D800E1CC41 /* Frameworks */,
@@ -169,8 +203,7 @@
 		5BA0EA5C17A935D800E1CC41 /* testMovingView */ = {
 			isa = PBXGroup;
 			children = (
-				5BA0EA9F17A9687A00E1CC41 /* Data */,
-				5BA0EA9C17A9499F00E1CC41 /* Resources */,
+				C6D048D117BB56E800A91556 /* OpenSources */,
 				C6FD800217B1EFEF00C31F6C /* ScreenSaver */,
 				5BA0EA9817A943A500E1CC41 /* ImageTransfer */,
 				C6FD7FFF17B1EA6000C31F6C /* RootViewController.h */,
@@ -179,6 +212,7 @@
 				C6FD7FFD17B1EA4800C31F6C /* SampleManager.m */,
 				5BA0EA6517A935D800E1CC41 /* AppDelegate.h */,
 				5BA0EA6617A935D800E1CC41 /* AppDelegate.m */,
+				5BA0EA9C17A9499F00E1CC41 /* Resources */,
 				5BA0EA5D17A935D800E1CC41 /* Supporting Files */,
 			);
 			path = testMovingView;
@@ -220,6 +254,7 @@
 		5BA0EA9817A943A500E1CC41 /* ImageTransfer */ = {
 			isa = PBXGroup;
 			children = (
+				5BA0EA9F17A9687A00E1CC41 /* Data */,
 				5BA16D7117AABDB000948002 /* NewsSectionViewController.h */,
 				5BA16D7217AABDB000948002 /* NewsSectionViewController.m */,
 				5BA16D7317AABDB000948002 /* NewsSectionViewController.xib */,
@@ -256,6 +291,41 @@
 				5BA0EA9A17A944F700E1CC41 /* News.m */,
 			);
 			name = Data;
+			sourceTree = "<group>";
+		};
+		C6D048D117BB56E800A91556 /* OpenSources */ = {
+			isa = PBXGroup;
+			children = (
+				C6D048D217BB570E00A91556 /* AZAppearanceKit */,
+			);
+			name = OpenSources;
+			sourceTree = "<group>";
+		};
+		C6D048D217BB570E00A91556 /* AZAppearanceKit */ = {
+			isa = PBXGroup;
+			children = (
+				C6D048D317BB570E00A91556 /* AZDrawingFunctions.h */,
+				C6D048D417BB570E00A91556 /* AZDrawingFunctions.m */,
+				C6D048D517BB570E00A91556 /* AZGradient.h */,
+				C6D048D617BB570E00A91556 /* AZGradient.m */,
+				C6D048D717BB570E00A91556 /* AZGradientView.h */,
+				C6D048D817BB570E00A91556 /* AZGradientView.m */,
+				C6D048D917BB570E00A91556 /* AZLabel.h */,
+				C6D048DA17BB570E00A91556 /* AZLabel.m */,
+				C6D048DB17BB570E00A91556 /* AZNavigationBar.h */,
+				C6D048DC17BB570F00A91556 /* AZNavigationBar.m */,
+				C6D048DD17BB570F00A91556 /* AZShadow.h */,
+				C6D048DE17BB570F00A91556 /* AZShadow.m */,
+				C6D048DF17BB570F00A91556 /* AZShadowedTableView.h */,
+				C6D048E017BB570F00A91556 /* AZShadowedTableView.m */,
+				C6D048E117BB570F00A91556 /* AZTabBar.h */,
+				C6D048E217BB570F00A91556 /* AZTabBar.m */,
+				C6D048E317BB570F00A91556 /* AZTableViewCell.h */,
+				C6D048E417BB570F00A91556 /* AZTableViewCell.m */,
+				C6D048E517BB570F00A91556 /* AZToolbar.h */,
+				C6D048E617BB570F00A91556 /* AZToolbar.m */,
+			);
+			path = AZAppearanceKit;
 			sourceTree = "<group>";
 		};
 		C6FD800217B1EFEF00C31F6C /* ScreenSaver */ = {
@@ -405,6 +475,16 @@
 				C6FD800A17B1F4BC00C31F6C /* MystifyView.m in Sources */,
 				C6FD800D17B1FA9F00C31F6C /* MystifyPoint.m in Sources */,
 				C6FD801017B21C0900C31F6C /* MystifyPolygon.m in Sources */,
+				C6D048E717BB570F00A91556 /* AZDrawingFunctions.m in Sources */,
+				C6D048E817BB570F00A91556 /* AZGradient.m in Sources */,
+				C6D048E917BB570F00A91556 /* AZGradientView.m in Sources */,
+				C6D048EA17BB570F00A91556 /* AZLabel.m in Sources */,
+				C6D048EB17BB570F00A91556 /* AZNavigationBar.m in Sources */,
+				C6D048EC17BB570F00A91556 /* AZShadow.m in Sources */,
+				C6D048ED17BB570F00A91556 /* AZShadowedTableView.m in Sources */,
+				C6D048EE17BB570F00A91556 /* AZTabBar.m in Sources */,
+				C6D048EF17BB570F00A91556 /* AZTableViewCell.m in Sources */,
+				C6D048F017BB570F00A91556 /* AZToolbar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

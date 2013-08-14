@@ -62,7 +62,7 @@
 {
     CGRect startFrame,endFrame;
     endFrame    = self.view.frame;
-    startFrame  = CGRectMake(CGRectGetMinX(endFrame) + CGRectGetWidth(endFrame), CGRectGetMinY(endFrame), CGRectGetWidth(endFrame), CGRectGetHeight(endFrame));
+    startFrame  = CGRectMake(CGRectGetMinX(endFrame) + CGRectGetWidth(endFrame)/5, CGRectGetMinY(endFrame), CGRectGetWidth(endFrame), CGRectGetHeight(endFrame));
     
     self.view.frame = startFrame;
     self.view.alpha = 0;

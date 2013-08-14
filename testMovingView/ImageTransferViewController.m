@@ -13,6 +13,7 @@
 #import "NewsSectionListViewController.h"
 #import "NewsPanelViewController.h"
 #import "NewsViewController.h"
+#import "AZGradientView.h"
 
 typedef enum {
     NewsViewCtrlTypePanel = 0,
@@ -42,6 +43,11 @@ typedef enum {
 	// Do any additional setup after loading the view, typically from a nib.
 
     [self addNewsPanel];
+    
+    AZGradientView *gradientView = (AZGradientView*)self.view;
+    [gradientView setType:AZGradientViewTypeLinear];
+    [gradientView setGradient: [[AZGradient alloc] initWithColorsAndLocations:[[UIColor blackColor] colorWithAlphaComponent:0.5],0.0,[UIColor darkGrayColor],0.6,[UIColor grayColor],0.99, nil]];
+    gradientView.angle = 90;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -70,14 +76,8 @@ typedef enum {
     // add panel
     self.newsPanelViewCtrl = [[NewsPanelViewController alloc] initWithNewsList:newsList];
     self.newsPanelViewCtrl.view.frame = self.contentView.bounds;
-    
-    CATransition *transition = [CATransition animation];
-    transition.type = kCATransitionFade;
-    transition.duration = 1;
-    transition.timingFunction = [CAMediaTimingFunction
-                                 functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-    transition.type =kCATransitionFade;
-    [self.contentView.layer addAnimation:transition forKey:nil];
+
+    [self addChildViewController:self.newsPanelViewCtrl];
     [self.contentView addSubview:self.newsPanelViewCtrl.view];
 }
 
@@ -135,13 +135,25 @@ typedef enum {
 
         [self addNewsListWithAvailableNewsViewCtrl:newsVCArray];
         [self.newsPanelViewCtrl.view removeFromSuperview];
+        [self.newsPanelViewCtrl removeFromParentViewController];
         self.newsPanelViewCtrl = nil;
     }
     else
     {
-        [self addNewsPanel];
-        [self.newsSectionListViewCtrl.view removeFromSuperview];
-        self.newsSectionListViewCtrl = nil;
+        [UIView animateWithDuration:0.5
+                              delay:0
+                            options:UIViewAnimationOptionCurveEaseOut
+                         animations:^{
+                             [self.newsSectionListViewCtrl.view setAlpha:0];
+                         }
+                         completion:^(BOOL finished){
+                             [self addNewsPanel];
+                             
+                             [self.newsSectionListViewCtrl.view removeFromSuperview];
+                             [self.newsSectionListViewCtrl removeFromParentViewController];
+                             self.newsSectionListViewCtrl = nil;
+                         }
+         ];
     }
 }
 

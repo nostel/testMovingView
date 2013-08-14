@@ -10,6 +10,7 @@
 #import "NewsSectionViewController.h"
 #import "NewsSection.h"
 #import "NewsViewController.h"
+#import "AZLabel.h"
 
 @interface NewsSectionListViewController ()
 {
@@ -92,12 +93,21 @@
 //}
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    UILabel *label = [UILabel new];
-    label.text = ((NewsSection*)self.sectionList[section]).sectionName;
-    label.textColor = [UIColor redColor];
-    label.font = [UIFont systemFontOfSize:17];
-    label.backgroundColor = [UIColor clearColor];
-    [label sizeToFit];
+    AZLabel *label = [[AZLabel alloc] init];
+    if ([NSParagraphStyle class] && [AZLabel instancesRespondToSelector: @selector(setAttributedText:)]) {
+        NSMutableAttributedString *as = [[NSMutableAttributedString alloc] initWithString:((NewsSection*)self.sectionList[section]).sectionName];
+        NSRange wholeRange = NSMakeRange(0, as.length);
+        
+        AZGradient *gradient = [[AZGradient alloc] initWithStartingColor:[UIColor colorWithRed:1 green:1 blue:1 alpha:1.000] endingColor:[UIColor colorWithRed:1 green:0.8 blue:0.8 alpha:1.000]];
+        AZGradientDirection direction = AZGradientDirectionVertical;
+
+        [as addAttribute:AZLabelGradientForegroundAttributeName value:gradient range:wholeRange];
+        [as addAttribute:AZLabelGradientForegroundDirectionAttributeName value:@(direction) range:wholeRange];
+        [as addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:17] range:wholeRange];
+        label.backgroundColor = [UIColor clearColor];
+
+        label.attributedText = as;
+    }
     return label;
 }
 
@@ -118,15 +128,26 @@
         if([vc.content isEqual:news])
         {
             CGRect endFrame = [self.view convertRect:inView.frame fromView:inView.superview];
+//            [UIView animateWithDuration:ANIMATE_DURATION
+//                             animations:^(){
+//                                 vc.view.frame = endFrame;
+//                             }
+//                             completion:^(BOOL finished){
+//                                 [vc.view removeFromSuperview];
+//                                 [self.availableNewsViewCtrlArray removeObject:vc];
+//                             }
+//             ];
+            
             [UIView animateWithDuration:ANIMATE_DURATION
+                                  delay:0
+                                options:UIViewAnimationOptionCurveEaseOut
                              animations:^(){
                                  vc.view.frame = endFrame;
                              }
                              completion:^(BOOL finished){
                                  [vc.view removeFromSuperview];
                                  [self.availableNewsViewCtrlArray removeObject:vc];
-                             }
-             ];
+                             }];
             return YES;
         }
     }

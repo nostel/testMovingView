@@ -35,6 +35,7 @@
     self = [super init];
     if (self) {
         _newsList = newsList;
+        _newsViewCtrlArray = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -42,8 +43,6 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
-    [self buildNewsViewCtrlArray];
 }
 
 - (void)didReceiveMemoryWarning
@@ -52,31 +51,39 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)buildNewsViewCtrlArray
+- (void)viewDidAppear:(BOOL)animated
 {
-    _newsViewCtrlArray = [[NSMutableArray alloc] init];
-    
+    [super viewDidAppear:animated];
+    [self addNewsSlot:0];
+}
+
+- (void)addNewsSlot:(int)currentNewsSlot
+{
     NSArray *newsSLots = @[_newsSlot1,_newsSlot2,_newsSlot3,_newsSlot4,_newsSlot5];
+
+    News *news = self.newsList[currentNewsSlot];
     
-    int indexOfCurrentNewsSlot = 0;
-    for (News *news in self.newsList)
-    {
-        UIView *slot = newsSLots[indexOfCurrentNewsSlot];
-        NewsViewController *newsViewCtrl = [[NewsViewController alloc] initWithNibName:@"NewsViewController" bundle:nil content:news];
-        
-        newsViewCtrl.view.frame = slot.bounds;
-        
-        [newsViewCtrl viewWillAppear:YES];
-        [slot addSubview:newsViewCtrl.view];
-        [newsViewCtrl viewDidAppear:YES];
-        [_newsViewCtrlArray addObject:newsViewCtrl];
-        
-        indexOfCurrentNewsSlot++;
-        
-        // currently there's only 5 news slot
-        if (indexOfCurrentNewsSlot > 5) {
-            break;
-        }
+    UIView *slot = newsSLots[currentNewsSlot];
+    NewsViewController *newsViewCtrl = [[NewsViewController alloc] initWithNibName:@"NewsViewController" bundle:nil content:news];
+    
+    newsViewCtrl.view.frame = slot.bounds;
+    
+    [newsViewCtrl viewWillAppear:YES];
+    [slot addSubview:newsViewCtrl.view];
+    [newsViewCtrl viewDidAppear:YES];
+    
+    [_newsViewCtrlArray addObject:newsViewCtrl];
+    [self addChildViewController:newsViewCtrl];
+    
+    currentNewsSlot++;
+    
+    // currently there's only 5 news slot
+    if (currentNewsSlot >= newsSLots.count) {
+        return;
     }
+    else{
+        [self addNewsSlot:currentNewsSlot];
+    }
+    
 }
 @end
